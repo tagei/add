@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1,user-scalable=no">
+	<title>新建商品</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/comm.css">
+	<link rel="stylesheet" type="text/css" href="css/add.css">
+</head>
+<body>
+<div class="wrap">
+	<header class="header">
+	<div class="res"><a href="#">取消</a></div>
+		<h1>新建商品</h1>
+		<div class="pop"><a href="#">发布</a></div>
+	</header>
+<div class="main">
+	<section class="addpic">
+	<ul>
+		<!-- <li><div class="box1"></div></li>
+		<li><div class="box1"></div></li>
+		<li><div class="box1"></div></li>
+		<li><div class="box1"></div></li>
+		<li><div class="box1"></div></li> -->
+	</ul>
+		<a href="#" class="addbox"><div class="box2"></div></a>
+	</section>
+	<section class="info">
+		<h1>类型</h1>
+		<div class="ma_50">
+			<span class="cur">全新</span>
+			<span>二手转让</span>
+		</div>		
+	</section>
+	<section class="info-con">
+		<div class="info_main">
+			<label>标题</label>
+			<input type="text" placeholder="" id="input_title">
+		</div>
+		<div class="info_main mask">
+			<label>价格</label>
+			<input type="text" placeholder="" id="price">
+		</div>
+		<div class="info_main mask">
+			<label>库存</label>
+			<input type="text" placeholder="" id="stock">
+		</div>
+	</section>
+	<section class="addNew">
+		<span>+添加商品规格</span>
+	</section>
+	<section class="logistical">
+		<div class="info_main">
+			<label>运费</label>
+			<input type="text" placeholder="0.00">
+		</div>
+	</section>
+	<section class="logistical">
+		<div class="info_main">
+			<label class="title">描述</label>
+			<textarea class="desc" row="10"></textarea>
+		</div>
+	</section>
+	<section class="logistical">
+	<a href="javascript:;" class="classify">
+		<div class="info_main">
+			<label>分类</label>
+			<span class="fr">未分类</span>
+		</div>
+	</a>
+		
+	</section>
+	<section class="logistical pad30">
+		<div class="info_main">
+			<label>品类</label>
+			<select>
+				<option value="其他/其他">其他/其他</option>
+			</select>
+		</div>
+	</section>
+</div>
+<div class="dialog"  id="tan"  style="display:none;">
+    <div class="dialog_mask"></div>
+    <div class="weui_dialog_bg">
+        <div class="weui">
+        	<div class="dialog_title">
+        	分类至<span>（按分类展示商品，方便买家筛选）</span>
+        	</div>
+        	<ul class="b-userlist">
+        		<li class="com-flex com-border-bottom"> 
+					<label class="checkbox-group">
+						<input type="checkbox" class="select_item">
+						<span></span>
+						<div class="com-flex-item link_employee_detail_class">
+							<p class="b-dtl-usr-tit">时尚女装</p>
+							<p class="b-userlist-pay">共0件商品</p>
+						</div>
+					</label>
+				</li>
+				<li class="com-flex com-border-bottom"> 
+					<label class="checkbox-group">
+						<input type="checkbox" class="select_item">
+						<span></span>
+						<div class="com-flex-item link_employee_detail_class">
+							<p class="b-dtl-usr-tit">时尚女装</p>
+							<p class="b-userlist-pay">共0件商品</p>
+						</div>
+					</label>
+				</li>
+        	</ul>
+        	<a href="#" class="newBuilt">新建分类</a>
+        	<div class="dialog_btn">
+        		<a href="#" class="cancel">取消</a>
+        		<a href="#" class="confirm">确定</a>
+        	</div>
+        </div>
+       <div class="eidt"> 
+       		<div class="eidt_title">
+       			新建分类名称
+       		</div>
+       		<input type="text" placeholder="请输入分类名称">
+       		<div class="eidt_btn">
+       			<a href="#">取消</a>
+       			<a href="#">确定</a>
+       		</div>
+       </div>
+    </div>
+</div>
+</div>
+<div class="dialog_img">
+<div class="lazy_tip" id="lazy_tip" style="display: none;">
+	<span>1%</span><br>
+	加载是很重要的......
+<div class="l"><canvas class="sonic" height="100" width="100" style="margin-top: 0px;"></canvas></div></div>
+<div class="lazy_cover" style="display: none;"></div>
+<div class="resource_lazy hide"></div>
+
+<div class="pic_edit">
+	<h2 style="color: #FFFFFF"></h2>
+	<div class="btns">
+		<a id="resBtn" class="btn">放弃</a>
+    	<a id="clipBtn" class="btn">完成</a>
+	</div>
+	<div id="clipArea" style="-webkit-user-select: none; overflow: hidden; position: relative;"><div class="photo-clip-view" style="position: absolute; left: 50%; top: 50%; width: 336.375px; height: 336.375px; margin-left: -168.188px; margin-top: -168.188px;"><div class="photo-clip-moveLayer" style="transform-origin: 0px 0px 0px; transition-timing-function: cubic-bezier(0.1, 0.57, 0.1, 1); transition-duration: 0ms; transform: translate(0px, 0px) scale(1) translateZ(0px); touch-action: none; -webkit-user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><div class="photo-clip-rotateLayer"></div></div></div><div class="photo-clip-mask" style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; pointer-events: none;"><div class="photo-clip-mask-left" style="position: absolute; left: 0px; right: 50%; top: 50%; bottom: 50%; width: auto; height: 336.375px; margin-right: 168.188px; margin-top: -168.188px; margin-bottom: -168.188px; background-color: rgba(0, 0, 0, 0);"></div><div class="photo-clip-mask-right" style="position: absolute; left: 50%; right: 0px; top: 50%; bottom: 50%; margin-left: 168.188px; margin-top: -168.188px; margin-bottom: -168.188px; background-color: rgba(0, 0, 0, 0);"></div><div class="photo-clip-mask-top" style="position: absolute; left: 0px; right: 0px; top: 0px; bottom: 50%; margin-bottom: 168.188px; background-color: rgba(0, 0, 0, 0);"></div><div class="photo-clip-mask-bottom" style="position: absolute; left: 0px; right: 0px; top: 50%; bottom: 0px; margin-top: 168.188px; background-color: rgba(0, 0, 0, 0);"></div><div class="photo-clip-area" style="border: 1px dashed rgb(221, 221, 221); position: absolute; left: 50%; top: 50%; width: 336.375px; height: 336.375px; margin-left: -169.188px; margin-top: -169.188px;"></div></div></div>
+	
+	
+	<input type="file" id="file" style="opacity: 0;position: fixed;bottom: -100px" accept="image/*">
+</div>
+<img src="" title="upload.jpg" filename="" id="hit" style="display: none; z-index: 9; background-color: rgb(102, 102, 102); background-size: contain; background-position: 50% 50%; background-repeat: no-repeat;">
+<div id="cover"></div>
+</div>
+<script src="js/jquery-2.1.0.min.js"></script>
+<script src="js/sonic.js"></script>
+<script src="js/comm.js"></script>
+<script src="js/hammer.js"></script>
+<script src="js/iscroll-zoom.js"></script>
+<script src="js/jquery.photoClip.js"></script>
+<script>
+var hammer = '';
+var currentIndex = 0;
+var body_width = $('body').width();
+var body_height = $('body').height();
+
+$("#clipArea").photoClip({
+	width: body_width * 0.8125,
+	height: body_width * 0.8125,
+	file: "#file",
+	view: "#hit",
+	ok: "#clipBtn",
+	loadStart: function () {
+		//console.log("照片读取中");
+		$('.lazy_tip span').text('');
+		$('.lazy_cover,.lazy_tip').show();
+	},
+	loadComplete: function () {
+		//console.log("照片读取完成");
+		$('.lazy_cover,.lazy_tip').hide();
+	},
+	clipFinish: function (dataURL) {
+		$('#hit').attr('src', dataURL);
+		saveImageInfo();
+	}
+});
+
+//图片上传
+function saveImageInfo() {
+	var filename = $('#hit').attr('fileName');
+	var img_data = $('#hit').attr('src');
+	
+	$.post("这里填写图片获取的网址", {image: img_data}, function (data) {
+		if (data != '') {
+//			console.info(data);
+			//data 为返回文件名；
+			alert('提交成功');
+		}
+	});
+}
+
+/*获取文件拓展名*/
+function getFileExt(str) {
+	var d = /\.[^\.]+$/.exec(str);
+	return d;
+}
+
+//图片上传结束
+$(function () {
+	$('#upload2').on('touchstart', function () {
+		//图片上传按钮
+		$('#file').click();
+	})
+})
+
+</script>
+
+<script>
+	$(function(){
+		//
+		$('.newBuilt').click(function(){
+			$('.eidt').fadeIn(1000);
+		});
+			$('.classify').click(function(){
+			
+			$('#tan').fadeIn('slow');
+			$('.weui').animate({height:'230px'}, 1000);
+
+	});
+			
+	var selected = function(){
+			var flag = false;
+			$('.select_item').each(function(){
+				if(!$(this).is(':checked')){
+					flag = true;
+				}
+			});
+			return flag;
+		}
+
+		//
+		
+		//类型
+		$('.ma_50 span').click(function(){
+			$(this).addClass('cur').siblings().removeClass('cur');
+		});
+
+		//发布
+		$('.pop a').click(function(){
+			var input_title = $('#input_title').val();
+			var price = $('#price').val();
+			var stock = $('#stock').val();
+
+			if(input_title == ""){
+
+				alert('请输入标题');
+				return false
+			}
+			if(price == ""){
+				alert('请输入价格');
+				return false
+			}
+			if(stock == ""){
+				alert('请输入库存');
+				return false
+			}
+
+		});
+
+
+		//添加规格
+		$('.addNew').click(function(){
+
+			var html='<div class="hides">'+'<div class="info_main"><label>规格</label><input type="text" placeholder=""></div>'+
+            '<div class="info_main"><label>价格</label><input type="text" placeholder=""></div>'+
+            '<div class="info_main"><label>库存</label><input type="text" placeholder=""></div>'+
+            '<div class="dele"><em><i></i></em></div>'+
+            '</div>';
+            $('.info-con').after(html);
+			$('.mask').hide();
+		
+		});
+			$(document).on('click','.dele',function(){
+			$(this).parent().remove();			
+				if($('.hides').length == ''){
+					$('.mask').show();					
+				}
+		});
+	});
+</script>
+<script>
+$(function(){
+	$('.addbox').click(function(){
+		$('.dialog_img').fadeIn();
+	});
+	$('#resBtn').click(function(){
+		alert('确定放弃吗？')
+		// $('.dialog_img').fadeOut(1000);
+	});
+});
+	
+</script>
+</body>
+</html>
